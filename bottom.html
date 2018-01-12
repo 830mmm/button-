@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+<style>
+  .btn{
+    text-decoration:none;
+    font-size:2rem;
+    color:white;
+    padding:10px 20px 10px 20px;
+    margin:20px;
+    display:inline-block;
+    border-radius:10px;
+    transition:all 0.1s;
+    text-shadow: 0px -1.5px rgba(0, 0, 0, 0.44);
+    font-family: 'Noto Sans', sans-serif;
+  }
+  .btn.blue{
+    background-color:rgba(19, 86, 236, 0.88);
+    border-bottom:5px solid rgb(26, 75, 185);
+  }
+.btn:active{
+  transform: translateY(3px);
+}
+.btn.blue:active{
+  border-bottom:2px solid rgb(26, 75, 185);
+}
+.btn.red{
+  background-color:rgba(212, 5, 5, 0.81);
+  border-bottom:5px solid rgba(186, 5, 5, 0.83);
+}
+.btn.red:active{
+  border-bottom:2px solid rgba(186, 5, 5, 0.83);
+}
+.btn.purple{
+  background-color: rgb(95, 30, 232);
+  border-bottom:5px solid rgb(79, 21, 201);
+}
+.btn.purple:active{
+  border-bottom:2px solid rgb(79, 21, 201);
+}
+</style>
+</head>
+<body>
+  <a class="btn blue" href="#blue">blue</a>
+  <a class="btn red" href="#red">red</a>
+  <a class="btn purple" href="#purple">purple</a>
+</body>
+</html>
