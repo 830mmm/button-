@@ -39,11 +39,152 @@
 .btn.purple:active{
   border-bottom:2px solid rgb(79, 21, 201);
 }
+a{
+  display:inline-block;
+}
+input{background-color:rgba(147, 209, 51, 1);
+  border:1px solid white;
+  color:white;
+}
+input onclick{
+  border:2px solid white;
+}
 </style>
 </head>
 <body>
+
+<input type="button" value="button:보임" onclick="document.querySelector('#button').style.visibility='visible'">
+<div id="button">
+<input type="button" value="button:안 보임" onclick="document.querySelector('#button').style.visibility='hidden'">
+  <input type="button" value="moon" onclick="
+  document.querySelector('body').style.backgroundColor='black';
+  document.querySelector('body').style.color='white';
+  ">
+  <input type="button" value="sun" onclick="
+  document.querySelector('body').style.backgroundColor='white';
+  document.querySelector('body').style.color='black';
+  ">
+  <input type="button" value="white" onclick="
+ document.querySelector('.btn.blue').style.color='white';
+ document.querySelector('.btn.red').style.color='white';
+ document.querySelector('.btn.purple').style.color='white';
+
+  ">
+  <input type="button" value="black" onclick="
+  document.querySelector('.btn.blue').style.color='black';
+    document.querySelector('.btn.red').style.color='black';
+      document.querySelector('.btn.purple').style.color='black';">
+<br><br>
+      <input type="button" value="blue white" onclick="
+     document.querySelector('.btn.blue').style.color='white';
+      ">
+      <input type="button" value="red white" onclick="
+     document.querySelector('.btn.red').style.color='white';
+      ">
+      <input type="button" value="purple white" onclick="
+     document.querySelector('.btn.purple').style.color='white';
+      ">
+
+      <input type="button" value="blue black" onclick="
+     document.querySelector('.btn.blue').style.color='black';
+      ">
+      <input type="button" value="red black" onclick="
+     document.querySelector('.btn.red').style.color='black';
+      ">
+      <input type="button" value="purple black" onclick="
+     document.querySelector('.btn.purple').style.color='black';
+      "><br><br>
+      <input type="button" value="white" onclick="
+      document.querySelector('body').style.color='white';
+      ">
+      <input type="button" value="black" onclick="
+     document.querySelector('body').style.color='black';
+      ">
+      <input type="button" value="white" onclick="
+      document.querySelector('.btn.blue').style.backgroundColor='white';
+      document.querySelector('.btn.red').style.backgroundColor='white';
+      document.querySelector('.btn.purple').style.backgroundColor='white';
+      document.querySelector('.btn.blue').style.borderBottomColor='white';
+      document.querySelector('.btn.red').style.borderBottomColor='white';      document.querySelector('.btn.purple').style.borderBottomColor='white';
+      document.querySelector('.btn.blue').style.textShadow='none';
+      document.querySelector('.btn.red').style.textShadow='none';      document.querySelector('.btn.purple').style.textShadow='none';
+      ">
+      <input type="button" value="black" onclick="
+      document.querySelector('.btn.blue').style.backgroundColor='black';
+      document.querySelector('.btn.red').style.backgroundColor='black';
+      document.querySelector('.btn.purple').style.backgroundColor='black';
+      document.querySelector('.btn.blue').style.borderBottomColor='black';
+      document.querySelector('.btn.red').style.borderBottomColor='black';      document.querySelector('.btn.purple').style.borderBottomColor='black';
+      "><br><br>
+      <input type="button" value="blue white" onclick="
+      document.querySelector('.btn.blue').style.backgroundColor='white';
+        document.querySelector('.btn.blue').style.borderBottomColor='white';
+        document.querySelector('.btn.blue').style.textShadow='none';">
+      <input type="button" value="red white" onclick="
+      document.querySelector('.btn.red').style.backgroundColor='white';
+      document.querySelector('.btn.red').style.borderBottomColor='white';
+      document.querySelector('.btn.red').style.textShadow='none'; ">
+      <input type="button" value="purple white" onclick="
+      document.querySelector('.btn.purple').style.backgroundColor='white';
+      document.querySelector('.btn.purple').style.borderBottomColor='white';
+      document.querySelector('.btn.purple').style.textShadow='none';">
+
+      <input type="button" value="blue black" onclick="
+      document.querySelector('.btn.blue').style.backgroundColor='black';
+      document.querySelector('.btn.blue').style.borderBottomColor='black';">
+      <input type="button" value="red black" onclick="
+      document.querySelector('.btn.red').style.backgroundColor='black';
+      document.querySelector('.btn.red').style.borderBottomColor='black';">
+      <input type="button" value="purple black" onclick="
+      document.querySelector('.btn.purple').style.backgroundColor='black';
+      document.querySelector('.btn.purple').style.borderBottomColor='black';">
+<br><br>
+      <input type="button" value="펑" onclick="
+      document.querySelector('.btn.blue').style.backgroundColor='rgba(19, 86, 236, 0.88)';
+      document.querySelector('.btn.red').style.backgroundColor='rgba(212, 5, 5, 0.81)';
+      document.querySelector('.btn.purple').style.backgroundColor='rgb(95, 30, 232)';
+      document.querySelector('.btn.blue').style.borderBottomColor='rgb(26, 75, 185)';
+      document.querySelector('.btn.red').style.borderBottomColor='rgba(186, 5, 5, 0.83)';
+      document.querySelector('.btn.purple').style.borderBottomColor='rgb(79, 21, 201)';
+      document.querySelector('.btn.blue').style.textShadow=' 0px -1.5px rgba(0, 0, 0, 0.44)';
+      document.querySelector('.btn.red').style.textShadow=' 0px -1.5px rgba(0, 0, 0, 0.44)';
+      document.querySelector('.btn.purple').style.textShadow=' 0px -1.5px rgba(0, 0, 0, 0.44)';
+      document.querySelector('.btn.blue').style.color='white';
+        document.querySelector('.btn.red').style.color='white';
+          document.querySelector('.btn.purple').style.color='white';
+      ">
+      <input type="button" value="blue 펑" onclick="
+      document.querySelector('.btn.blue').style.backgroundColor='rgba(19, 86, 236, 0.88)';
+      document.querySelector('.btn.blue').style.borderBottomColor='rgb(26, 75, 185)';
+      document.querySelector('.btn.blue').style.textShadow=' 0px -1.5px rgba(0, 0, 0, 0.44)';
+      document.querySelector('.btn.blue').style.color='white'">
+      <input type="button" value="red 펑" onclick="
+      document.querySelector('.btn.red').style.backgroundColor='rgba(212, 5, 5, 0.81)';
+      document.querySelector('.btn.red').style.borderBottomColor='rgba(186, 5, 5, 0.83)';
+      document.querySelector('.btn.red').style.textShadow=' 0px -1.5px rgba(0, 0, 0, 0.44)';
+        document.querySelector('.btn.red').style.color='white'">
+      <input type="button" value="purple 펑" onclick="
+      document.querySelector('.btn.purple').style.backgroundColor='rgb(95, 30, 232)';
+      document.querySelector('.btn.purple').style.borderBottomColor='rgb(79, 21, 201)';
+      document.querySelector('.btn.purple').style.textShadow=' 0px -1.5px rgba(0, 0, 0, 0.44)';
+      document.querySelector('.btn.purple').style.color='white';">
+</div>
+<div>
+
+
   <a class="btn blue" href="#blue">blue</a>
   <a class="btn red" href="#red">red</a>
   <a class="btn purple" href="#purple">purple</a>
+  <h1><ol>
+    <li>blue</li>
+    <li>red</li>
+    <li>purple</li>
+  </ol></h1>
+  <h2>HTML</h2>
+  <p>(복사)
+    "Hyper Text Mark-up Language" 의 약자. 웹 페이지의 모습을 기술하기 위한 규약. 프로그래밍 언어가 아니라 마크업 언어[1]다. 헷갈리지 않도록 하자. 웹사이트에서 흔히 볼 수 있는 htm 이나 html 확장자가 바로 이 언어로 작성된 문서이다.
+    HTML은 문법 오류에 관대한 편이다.[3] 그래서 닫는 태그를 누락한다던가 태그에 오타가 난다던가 하는 오류가 발생해도 어느 정도는 씹어먹고 작동할 수 있다. 물론 어느 정도까지만. div태그 등 중요한 태그에서 오타가 난다면 사이트 레이아웃이 홀랑 깨져버리기도 한다. 위에 있는 HTML5 표준 형식 HTML이 아니더라도, 그냥 Hello World! 라고만 써도(doctype선언문 누락, html선언 태그 누락, head, body태그 누락, h1의 닫는 태그 누락) 어지간해서는 의도한 바대로 출력이 된다. 물론 디버그 모드로 보면 이 부분이 잘못되었다고 에러가 떠 있을 것이다. HTML 최상단의 doctype[4] 선언이 누락될 경우에는 이야기가 많이 달라지는데, 이 경우 브라우저는 해당 HTML문서를 호환성 모드(Quirks mode)[5]로 해석하여 렌더링한다.
+  </p>
+</div>
 </body>
 </html>
