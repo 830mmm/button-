@@ -42,8 +42,8 @@
 a{
   display:inline-block;
 }
-input{background-color:rgba(147, 209, 51, 1);
-  border:1px solid white;
+input{background-color:rgba(0, 0, 0, 0.51);
+  border:0.5px solid rgba(0, 0, 0, 0.88);
   color:white;
 }
 input onclick{
@@ -52,92 +52,125 @@ input onclick{
 </style>
 </head>
 <body>
-
-<input type="button" value="button:보임" onclick="document.querySelector('#button').style.visibility='visible'">
-<div id="button">
-<input type="button" value="button:안 보임" onclick="document.querySelector('#button').style.visibility='hidden'">
-  <input type="button" value="moon" onclick="
-  document.querySelector('body').style.backgroundColor='black';
-  document.querySelector('body').style.color='white';
+    <input id="solar" type="button" value="버튼 가리기" onclick="
+    if(document.querySelector('#solar').value === '버튼 가리기') {
+      document.querySelector('#button').style.visibility='hidden';
+      document.querySelector('#solar').value = '버튼 보임';
+    }
+    else{
+      document.querySelector('#button').style.visibility='visible';
+        document.querySelector('#solar').value = '버튼 가리기';
+    }
   ">
-  <input type="button" value="sun" onclick="
-  document.querySelector('body').style.backgroundColor='white';
-  document.querySelector('body').style.color='black';
-  ">
-  <input type="button" value="white" onclick="
- document.querySelector('.btn.blue').style.color='white';
- document.querySelector('.btn.red').style.color='white';
- document.querySelector('.btn.purple').style.color='white';
-
-  ">
-  <input type="button" value="black" onclick="
-  document.querySelector('.btn.blue').style.color='black';
-    document.querySelector('.btn.red').style.color='black';
-      document.querySelector('.btn.purple').style.color='black';">
-<br><br>
-      <input type="button" value="blue white" onclick="
-     document.querySelector('.btn.blue').style.color='white';
-      ">
-      <input type="button" value="red white" onclick="
-     document.querySelector('.btn.red').style.color='white';
-      ">
-      <input type="button" value="purple white" onclick="
-     document.querySelector('.btn.purple').style.color='white';
-      ">
-
-      <input type="button" value="blue black" onclick="
-     document.querySelector('.btn.blue').style.color='black';
-      ">
-      <input type="button" value="red black" onclick="
-     document.querySelector('.btn.red').style.color='black';
-      ">
-      <input type="button" value="purple black" onclick="
-     document.querySelector('.btn.purple').style.color='black';
-      "><br><br>
-      <input type="button" value="white" onclick="
+  <div id="button">
+    <input id="restart" type="button" value="moon" onclick="
+    if(document.querySelector('#restart').value === 'moon'){
+      document.querySelector('body').style.backgroundColor='black';
       document.querySelector('body').style.color='white';
-      ">
-      <input type="button" value="black" onclick="
-     document.querySelector('body').style.color='black';
-      ">
-      <input type="button" value="white" onclick="
-      document.querySelector('.btn.blue').style.backgroundColor='white';
-      document.querySelector('.btn.red').style.backgroundColor='white';
-      document.querySelector('.btn.purple').style.backgroundColor='white';
-      document.querySelector('.btn.blue').style.borderBottomColor='white';
-      document.querySelector('.btn.red').style.borderBottomColor='white';      document.querySelector('.btn.purple').style.borderBottomColor='white';
-      document.querySelector('.btn.blue').style.textShadow='none';
-      document.querySelector('.btn.red').style.textShadow='none';      document.querySelector('.btn.purple').style.textShadow='none';
-      ">
-      <input type="button" value="black" onclick="
+      document.querySelector('#restart').value ='sun';
+      document.querySelector('#hoho').value='black';
+    }
+    else{
+      document.querySelector('body').style.backgroundColor='white';
+      document.querySelector('body').style.color='black';
+      document.querySelector('#restart').value = 'moon';
+      document.querySelector('#hoho').value='white';
+    }
+    ">
+  <input class="apple" type="button" value="black" onclick="
+    if(document.querySelector('.apple').value === 'black')
+  {document.querySelector('.btn.blue').style.color='black';
+    document.querySelector('.btn.red').style.color='black';
+    document.querySelector('.btn.purple').style.color='black';
+    document.querySelector('.apple').value='white';
+    }
+   else{
+     document.querySelector('.btn.blue').style.color='white';
+     document.querySelector('.btn.red').style.color='white';
+     document.querySelector('.btn.purple').style.color='white';
+     document.querySelector('.apple').value='black';
+   }
+  ">
+<br><br>
+    <input type="button" id="blue" value="blue black" onclick="
+        if(document.querySelector('#blue').value === 'blue black'){
+          document.querySelector('.btn.blue').style.color='black';
+          document.querySelector('#blue').value = 'blue white';
+        }
+     else{
+       document.querySelector('.btn.blue').style.color='white';
+         document.querySelector('#blue').value = 'blue black';}">
+      <input type="button" id="red" value="red black" onclick="if(document.querySelector('#red').value === 'red black'){
+      document.querySelector('.btn.red').style.color='black';
+      document.querySelector('#red').value='red white';}
+      else{
+        document.querySelector('.btn.red').style.color='white';
+        document.querySelector('#red').value='red black';
+      }">
+      <input type="button" id="purple" value="purple black" onclick="if(document.querySelector('#purple').value === 'purple black'){
+      document.querySelector('.btn.purple').style.color='black';
+      document.querySelector('#purple').value='purple white';}
+      else{
+        document.querySelector('.btn.purple').style.color='white';
+        document.querySelector('#purple').value='purple black';
+      }">
+      <br><br>
+      <input type="button" id="hoho" value="white" onclick="
+      if(document.querySelector('#hoho').value === 'white')
+      {document.querySelector('body').style.color='white';
+        document.querySelector('#hoho').value = 'black';}
+     else{document.querySelector('body').style.color='black';
+      document.querySelector('#hoho').value='white';}
+      " >
+      <input type="button" id="plus" value="white" onclick="
+      if(document.querySelector('#plus').value === 'white'){
+        document.querySelector('.btn.blue').style.backgroundColor='white';
+        document.querySelector('.btn.red').style.backgroundColor='white';
+        document.querySelector('.btn.purple').style.backgroundColor='white';
+        document.querySelector('.btn.blue').style.borderBottomColor='white';
+        document.querySelector('.btn.red').style.borderBottomColor='white';      document.querySelector('.btn.purple').style.borderBottomColor='white';
+        document.querySelector('.btn.blue').style.textShadow='none';
+        document.querySelector('.btn.red').style.textShadow='none';      document.querySelector('.btn.purple').style.textShadow='none';
+        document.querySelector('#plus').value='black';
+      }    else{document.querySelector('#plus').value='white';
       document.querySelector('.btn.blue').style.backgroundColor='black';
       document.querySelector('.btn.red').style.backgroundColor='black';
       document.querySelector('.btn.purple').style.backgroundColor='black';
       document.querySelector('.btn.blue').style.borderBottomColor='black';
-      document.querySelector('.btn.red').style.borderBottomColor='black';      document.querySelector('.btn.purple').style.borderBottomColor='black';
-      "><br><br>
-      <input type="button" value="blue white" onclick="
-      document.querySelector('.btn.blue').style.backgroundColor='white';
+      document.querySelector('.btn.red').style.borderBottomColor='black';     document.querySelector('.btn.purple').style.borderBottomColor='black';
+      }
+      ">
+      <br><br>
+        <input type="button" id="asdf" value="blue white" onclick="
+        if(document.querySelector('#asdf').value === 'blue white')
+        {document.querySelector('.btn.blue').style.backgroundColor='white';
         document.querySelector('.btn.blue').style.borderBottomColor='white';
-        document.querySelector('.btn.blue').style.textShadow='none';">
-      <input type="button" value="red white" onclick="
-      document.querySelector('.btn.red').style.backgroundColor='white';
-      document.querySelector('.btn.red').style.borderBottomColor='white';
-      document.querySelector('.btn.red').style.textShadow='none'; ">
-      <input type="button" value="purple white" onclick="
-      document.querySelector('.btn.purple').style.backgroundColor='white';
-      document.querySelector('.btn.purple').style.borderBottomColor='white';
-      document.querySelector('.btn.purple').style.textShadow='none';">
-
-      <input type="button" value="blue black" onclick="
-      document.querySelector('.btn.blue').style.backgroundColor='black';
-      document.querySelector('.btn.blue').style.borderBottomColor='black';">
-      <input type="button" value="red black" onclick="
-      document.querySelector('.btn.red').style.backgroundColor='black';
-      document.querySelector('.btn.red').style.borderBottomColor='black';">
-      <input type="button" value="purple black" onclick="
-      document.querySelector('.btn.purple').style.backgroundColor='black';
-      document.querySelector('.btn.purple').style.borderBottomColor='black';">
+        document.querySelector('.btn.blue').style.textShadow='none';
+        document.querySelector('#asdf').value='blue black';}
+        else{document.querySelector('#asdf').value='blue white';
+        document.querySelector('.btn.blue').style.backgroundColor='black';
+        document.querySelector('.btn.blue').style.borderBottomColor='black';
+        }">
+        <input type="button" id="sdfa" value="red white" onclick="
+        if(document.querySelector('#sdfa').value === 'red white')
+        {document.querySelector('.btn.red').style.backgroundColor='white';
+        document.querySelector('.btn.red').style.borderBottomColor='white';
+        document.querySelector('.btn.red').style.textShadow='none';
+        document.querySelector('#sdfa').value='red black';}
+        else{document.querySelector('#sdfa').value='red white';
+        document.querySelector('.btn.red').style.backgroundColor='black';
+        document.querySelector('.btn.red').style.borderBottomColor='black';
+        }">
+        <input type="button" id="fdsa" value="purple white" onclick="
+        if(document.querySelector('#fdsa').value === 'purple white')
+        {document.querySelector('.btn.purple').style.backgroundColor='white';
+        document.querySelector('.btn.purple').style.borderBottomColor='white';
+        document.querySelector('.btn.purple').style.textShadow='none';
+        document.querySelector('#fdsa').value='purple black';}
+        else{document.querySelector('#fdsa').value='purple white';
+        document.querySelector('.btn.purple').style.backgroundColor='black';
+        document.querySelector('.btn.purple').style.borderBottomColor='black';
+        }">
 <br><br>
       <input type="button" value="펑" onclick="
       document.querySelector('.btn.blue').style.backgroundColor='rgba(19, 86, 236, 0.88)';
